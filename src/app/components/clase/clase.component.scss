@@ -1,0 +1,20 @@
+.dino-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 250px;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    animation: createBox1 2s;
+}
+
+@keyframes createBox1 {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

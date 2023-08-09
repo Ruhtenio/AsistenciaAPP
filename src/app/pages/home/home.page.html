@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-item>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="logo" height="30">
+    <ion-title #titulo class="ion-text-left ion-text">
+      <div id="titulo">
+        Sistema de Asistencia 
+        <br>
+        <p id="nombre" *ngIf="usuario" class = "usuario" style = "text-align: center;"> [(ngModel)] = "usuario.nombre"</p>
+      </div>
+    </ion-title>
+    <!-- <ion-button (click)="salir()" expand="block" shape="round" class="right-margin-auto">Cerrar Sesion</ion-button> -->
+  </ion-item>
+  <ion-item [hidden]="!showqrreader">
+    <ion-button (click)="stopScanner()" expand="block" shape="round" class="center-margin-auto">
+      Stop scanner
+    </ion-button>
+  </ion-item>
+</ion-header>
+
+ <ion-content [fullscreen]="true" [hidden]="showqrreader">
+  <app-welcome #welcome [hidden]="!showwelcome"></app-welcome>
+  <app-clase #dinosaur [hidden]="!showdinosaur"></app-clase>
+  <app-forum #forum [hidden]="!showforum"></app-forum>
+</ion-content>
+
+<app-qr-reader #qrreader></app-qr-reader>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment value="welcome" (ionChange)="segmentChanged($event)" [(ngModel)]="selectedComponent">
+
+      <ion-segment-button value="welcome">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Welcome</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="qrreader">
+        <ion-icon name="qr-code-outline"></ion-icon>
+        <ion-label>Scan</ion-label>
+      </ion-segment-button>
+      
+      <ion-segment-button #dinoButton value="dinosaur">
+        <ion-icon name="alarm-outline"></ion-icon>
+        <ion-label>CLase</ion-label>
+      </ion-segment-button>
+      
+      <ion-segment-button value="forum">
+        <ion-icon name="pencil-outline"></ion-icon>
+        <ion-label>Forum</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

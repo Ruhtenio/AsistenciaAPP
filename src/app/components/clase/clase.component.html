@@ -1,0 +1,48 @@
+<ion-content [fullscreen]="true">
+
+  <img src="{{ clase.image }}" [hidden]="!hasData">
+  
+  <ion-grid fixed [hidden]="!hasData" class="dino-content">
+    <ion-row>
+      <ion-col size="5">Bloque Inicio</ion-col>
+      <ion-col size="7">{{ clase.bloqueInicio }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Bloque Termino</ion-col>
+      <ion-col size="7">{{ clase.bloqueTermino }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Dia</ion-col>
+      <ion-col size="7">{{ clase.dia }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Hora Fin</ion-col>
+      <ion-col size="7">{{ clase.horaFin }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Hora Inicio</ion-col>
+      <ion-col size="7">{{ clase.horaInicio }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">ID Asignatura</ion-col>
+      <ion-col size="7">{{ clase.idAsignatura }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Nombre Asignatura</ion-col>
+      <ion-col size="7">{{ clase.nombreAsignatura }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Nombre Profesor</ion-col>
+      <ion-col size="7">{{ clase.nombreProfesor }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Seccion</ion-col>
+      <ion-col size="7">{{ clase.seccion }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5">Sede</ion-col>
+      <ion-col size="7">{{ clase.sede }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
